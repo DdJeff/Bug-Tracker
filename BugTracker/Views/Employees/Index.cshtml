@@ -1,0 +1,71 @@
+﻿
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core"></a>.</p>
+</div>
+
+
+
+
+@model IEnumerable<Employees>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col border">
+                <strong>ID</strong>
+            </div>
+            <div class="col border">
+                <strong>Created by</strong>
+            </div>
+            <div class="col border">
+                <strong>Time Stamp</strong>
+            </div>
+            <div class="col border">
+                <strong>Title</strong>
+            </div>
+            <div class="col border">
+                <strong>Summary</strong>
+            </div>
+            <div class="col border">
+                <strong>Assigmed to</strong>
+            </div>
+            <div class="col border">
+                <strong>Status</strong>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div> <!--overview out-->
+
+    @foreach (var item in Model)
+    {
+
+        <div class="container">
+            <div class="row">
+                <div class="col border">
+                    @item.Id;
+                </div>
+                <div class="col border">
+                    @item.FirstName @item.LastName
+                </div>
+                <div class="col border">
+                    02:33:45:6677
+                </div>
+                <div class="col border">
+                    API
+                </div>
+                <div class="col border">
+                    Yes
+                </div>
+                <div class="col border">
+                    you
+                </div>
+                <div class="col border">
+                    OPen
+                </div>
+            </div>
+        </div>}
+    </div>
+    </div> <!--overview out-->
+</body>
+    </html>
