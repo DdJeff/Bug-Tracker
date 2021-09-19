@@ -47,3 +47,4 @@ C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\BugTr
 C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\BugTracker.dll
 C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\BugTracker.pdb
 C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\BugTracker.genruntimeconfig.cache
+C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\Razor\Views\Employees\ViewEmployee.cshtml.g.cs

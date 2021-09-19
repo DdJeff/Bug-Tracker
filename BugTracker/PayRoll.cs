@@ -17,5 +17,10 @@ namespace BugTracker
         {
             return dbConnection.Query<Employees>("SELECT * FROM employees;");
         }
+
+        public Employees GetEmloyeeById(string Id)
+        {
+            return dbConnection.QuerySingle<Employees>("SELECT * FROM employees WHERE Id = @id", new { id = Id});
+        }
     }
 }

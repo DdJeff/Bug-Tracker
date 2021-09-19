@@ -18,6 +18,15 @@ namespace BugTracker.Controllers
         {
             var employees = emp.GetAllEmployees();
             return View(employees);
+            //  return View(emp.GetAllEmployees());
+        }
+
+        //get employee by id
+
+        public  IActionResult ViewEmployee(string Id)
+        {
+            var employee = emp.GetEmloyeeById(Id);
+            return View(employee);
         }
     }
 }

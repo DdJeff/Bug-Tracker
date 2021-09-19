@@ -10,5 +10,7 @@ namespace BugTracker
     {
         public IEnumerable<Employees>GetAllEmployees();
 
+        public Employees GetEmloyeeById(string Id);
+
     }
 }
