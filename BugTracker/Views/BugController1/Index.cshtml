@@ -1,0 +1,29 @@
+﻿
+
+@model IEnumerable<Bug>
+
+@foreach (var item in Model)
+{
+<ol>
+    <li>
+        @item.Creator
+    </li>
+    <li>
+        @item.Assigned
+    </li>
+    <li>
+        @item.Id
+    </li>
+    <li>
+        @item.Summary
+    </li>
+    <li>
+        @item.Title
+    </li>
+</ol>
+
+}
+
+
+
+

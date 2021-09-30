@@ -5,7 +5,7 @@ using BugTracker.Models;
 
 namespace BugTracker
 {
-    public class PayRoll : IPayRoll
+    public class PayRoll : IPayRoll 
     {
         private readonly IDbConnection dbConnection;
 
@@ -20,7 +20,7 @@ namespace BugTracker
 
         public Employees GetEmloyeeById(string Id)
         {
-            return dbConnection.QuerySingle<Employees>("SELECT * FROM employees WHERE Id = @id", new { id = Id});
-        }
+            return dbConnection.QuerySingle<Employees>("SELECT * FROM employees WHERE Id = @id", new { id = Id });
+        }   
     }
 }
