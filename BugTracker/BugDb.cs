@@ -28,7 +28,7 @@ namespace BugTracker
        
         public void InsertBug(Bug insertBug)
         { 
-            dbCon.Execute("INSERT INTO bugs (Creator, Id, Title, Summary, Assigned) VALUES (@Creator, @Id, @Title, @Summary, @Assigned); ", new { Creator = insertBug.Creator, Id = insertBug.Id, Title = insertBug.Title, Summary = insertBug.Summary, Assigned = insertBug.Assigned }); 
+            dbCon.Execute("INSERT INTO bugs (Creator, Id, Title, Summary, Assigned) VALUES (@Creator, @Id, @Title, @Summary, @Assigned); ", new { Creator = insertBug.Creator, Id = insertBug.Id, Title = insertBug.Title, Summary = insertBug.Summary, Assigned = insertBug.Assigned });
         }
 
         public Bug BugInstance()
@@ -37,6 +37,8 @@ namespace BugTracker
             return bug;
         }
 
+      
+
         public void UpdateBug(Bug bug)
         {
             throw new NotImplementedException();
@@ -44,7 +46,11 @@ namespace BugTracker
 
         public IEnumerable<Employees> GetEmployees()
         {
-            return dbCon.Query<Employees>("SELECT * FROM categories;");
-        }
+            return dbCon.Query<Employees>("SELECT * FROM employees;");
+        }  
+        
+        //testing out the employee selction /option
+
+       
     }
 }

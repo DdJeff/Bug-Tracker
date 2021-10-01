@@ -6,15 +6,25 @@
         @using (Html.BeginForm("InsertBugDb", "BugController1", "Post"))
         {
 
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Created by: </span>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Created by: </span>
+            <select class="form-control" asp-for="Creator" value="" placeholder="Employee Name" id="basic-url" aria-describedby="basic-addon3id">
 
-                <input type="text" asp-for"" class="form-control" value="" placeholder="Employee Name" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
+                <option>Select Here</option>
+                <option>Deontay Jefferson</option>
+                <option>Michelle Jefferson</option>
+                <option>Josiah Jefferson</option>
+                <option>Noah Jefferson</option>
+                <option>Micah Jefferson</option>
+           
+            </select>
+
+
+        </div>
             <div class="input-group mb-3" onclick="genId()">
                     <span class="input-group-text" id="basic-addon2" >Generate Id: </span>
-                    <input type="text" asp-for="Id" value="" class="form-control" placeholder="Click to generate Id" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                </div>
+                    <input type="text" asp-for="Id" value="" class="form-control" placeholder="Click to generate Id" aria-label="Recipient's username" aria-describedby="basic-addon2">     
+            </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon3">Issue Title:</span>
@@ -27,8 +37,17 @@
             </div>
 
             <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon3">Assigned To: </span>
-                <input type="text" asp-for="Assigned" value="" name="Assigned" class="form-control" placeholder="Employee Name" id="basic-url" aria-describedby="basic-addon3">
+                <span class="input-group-text" id="basic-addon4">Assigned To: </span>
+                <select class="form-control" asp-for="Assigned" value="" name="Assigned" placeholder="Employee Name" id="basic-url" aria-describedby="basic-addon4">
+
+                    <option>Select Here</option>
+                    <option>Deontay Jefferson</option>
+                    <option>Michelle Jefferson</option>
+                    <option>Josiah Jefferson</option>
+                    <option>Noah Jefferson</option>
+                    <option>Micah Jefferson</option>
+
+                </select>
             </div>
             <br>
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -68,7 +87,7 @@
 
     // generating a random string id then update the DOM
     let idplacemnt = document.querySelectorAll("input");
-    idplacemnt[1].value = genId();
+    idplacemnt[0].value = genId();
 
 </script>
 }

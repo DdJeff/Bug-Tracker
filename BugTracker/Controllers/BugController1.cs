@@ -21,6 +21,7 @@ namespace BugTracker.Controllers
         public IActionResult InsertBug()
         {
             var newBug = bug.BugInstance();
+
             return View(newBug);
         }
         //Inserting the new bug into database

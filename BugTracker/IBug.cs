@@ -17,7 +17,7 @@ namespace BugTracker
 
         public Bug BugInstance();
 
-        public IEnumerable<Employees> GetEmployees();
+
 
         // come back and add a drop down.
 

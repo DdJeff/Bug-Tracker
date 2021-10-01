@@ -2,28 +2,29 @@
 
 @model IEnumerable<Bug>
 
-@foreach (var item in Model)
-{
-<ol>
-    <li>
-        @item.Creator
-    </li>
-    <li>
-        @item.Assigned
-    </li>
-    <li>
-        @item.Id
-    </li>
-    <li>
-        @item.Summary
-    </li>
-    <li>
-        @item.Title
-    </li>
-</ol>
-
-}
-
-
+<h2>Bug Tickets</h2>
+<div style="display: block">
+    <a href="/BugController1/InsertBug">Create a New Bug</a>
+</div>
+<table class="table">
+    <tr>
+        <th>Creator</th>
+        <th>Bug Id</th>
+        <th>Title</th>
+        <th>Issue Summary</th>
+        <th>Ticket Assigned to</th>
+    </tr>
+    @foreach (var bugTicket in Model)
+    {
+<tr>    <!--This is how you route the main list to individulks pages by ids-->
+    <!--  <td><a href=/Home/ViewProduct/product.ProductID>product.ProductID</a></td> -->
+    <td>@bugTicket.Creator</td>
+    <td>@bugTicket.Id</td>
+    <td>@bugTicket.Title</td>
+    <td>@bugTicket.Summary</td>
+    <td>@bugTicket.Assigned</td>
+</tr>
+    }
+</table>
 
 

@@ -1,4 +1,4 @@
-﻿
+﻿using System.Collections.Generic;
 
 namespace BugTracker.Models
 {
@@ -11,6 +11,7 @@ namespace BugTracker.Models
         public string LastName { get; set; }
         public string Title { get; set; }
         public int SecurityLevel { get; set; }
+        public IEnumerable<Employees> Emps { get; set; }
 
     }
 }
