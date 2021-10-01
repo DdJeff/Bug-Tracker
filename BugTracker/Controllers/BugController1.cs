@@ -2,6 +2,7 @@
 using BugTracker.Models;
 
 
+
 namespace BugTracker.Controllers
 {
     public class BugController1 : Controller
@@ -16,13 +17,13 @@ namespace BugTracker.Controllers
             var allBugs = bug.GetBugs();
             return View(allBugs);
         }
-
+        //creating the new bug
         public IActionResult InsertBug()
         {
-            var newBug = bug.AssignCategory();
+            var newBug = bug.BugInstance();
             return View(newBug);
         }
-
+        //Inserting the new bug into database
         public IActionResult InsertBugDb(Bug bugToInsert)
         {
             bug.InsertBug(bugToInsert);

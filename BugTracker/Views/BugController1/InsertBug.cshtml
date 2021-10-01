@@ -9,11 +9,11 @@
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">Created by: </span>
 
-                <input type="text" class="form-control" value="" placeholder="Employee Name" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" asp-for"" class="form-control" value="" placeholder="Employee Name" aria-label="Username" aria-describedby="basic-addon1">
             </div>
-            <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon2">Generate Id: </span>
-                    <input type="text" asp-for="Id" value="" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group mb-3" onclick="genId()">
+                    <span class="input-group-text" id="basic-addon2" >Generate Id: </span>
+                    <input type="text" asp-for="Id" value="" class="form-control" placeholder="Click to generate Id" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 </div>
 
             <div class="input-group mb-3">
@@ -36,3 +36,40 @@
         }
     </div>
 </div>
+
+@section scripts{ 
+<script type="text/javascript">
+    const genId = () => {
+        const mainArr = [["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
+        ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+        ['1', '2', '3', '4', '5', '6', '7', '8', '9']];
+
+        let IdString = "";
+        let char = "";
+
+    //Selceting a random index from mainArr to determind if the char will be A,a or 1...
+        for (let index = 0; index <= 15; index++) {
+
+            let randomAlph = Math.floor(Math.random() * 26);
+            let randomNumber = Math.floor(Math.random() * 9);
+            let randomItem = Math.floor(Math.random() * 3);
+
+            // console.log(mainArr[2][randomNumber]);
+
+            char = randomItem == 0 ? mainArr[0][randomAlph]
+                 : randomItem == 1 ? mainArr[1][randomAlph]
+                 : mainArr[2][randomNumber];
+
+            //adding the new character to the string
+            IdString += (char)
+        }
+        return (IdString);
+    }
+
+    // generating a random string id then update the DOM
+    let idplacemnt = document.querySelectorAll("input");
+    idplacemnt[1].value = genId();
+
+</script>
+}
+

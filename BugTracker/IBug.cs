@@ -15,7 +15,9 @@ namespace BugTracker
 
         public void InsertBug(Bug insertBug);
 
-        public Bug AssignCategory();
+        public Bug BugInstance();
+
+        public IEnumerable<Employees> GetEmployees();
 
         // come back and add a drop down.
 
