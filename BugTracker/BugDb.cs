@@ -22,7 +22,7 @@ namespace BugTracker
         }
         public Bug GetBugById(string Id)
         {
-            throw new NotImplementedException();
+            return dbCon.QuerySingle<Bug>("SELECT * FROM bugs WHERE Id = @Id", new { id = Id });
         }
 
        

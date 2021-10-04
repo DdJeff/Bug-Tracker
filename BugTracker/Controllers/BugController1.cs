@@ -17,6 +17,13 @@ namespace BugTracker.Controllers
             var allBugs = bug.GetBugs();
             return View(allBugs);
         }
+
+        //get bug by Id
+        public IActionResult ViewBug(string id)
+        {
+            var singleBug = bug.GetBugById(id);
+            return View(singleBug);
+        }
         //creating the new bug
         public IActionResult InsertBug()
         {
