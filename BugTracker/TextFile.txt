@@ -1,1 +1,10 @@
 ﻿What Im working on
+UPDATE BUG LOGIC AND VIEW
+add an open or closed field to the bugs
+sql/ model/ view = a status
+timestamp -- add later
+--make a js function to uppercase  all the titles
+	dom for this
+		let title = document.getElementsByClassName("Title");
+		let test = title[0].value.toUpperCase();
+		title[0].value = test;

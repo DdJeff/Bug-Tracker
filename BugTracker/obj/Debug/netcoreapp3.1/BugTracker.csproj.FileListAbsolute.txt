@@ -51,3 +51,4 @@ C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\Razor
 C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\Razor\Views\BugController1\Index.cshtml.g.cs
 C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\Razor\Views\BugController1\InsertBug.cshtml.g.cs
 C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\Razor\Views\BugController1\ViewBug.cshtml.g.cs
+C:\Users\FAMILY\source\repos\BugTracker\BugTracker\obj\Debug\netcoreapp3.1\Razor\Views\BugController1\UpdateBug.cshtml.g.cs

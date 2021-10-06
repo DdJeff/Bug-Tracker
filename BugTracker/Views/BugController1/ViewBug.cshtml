@@ -1,15 +1,20 @@
 ﻿@model Bug
 <h3>@Model.Title Information</h3>
+<br />
+<div style="display: block">
+    <a href="/BugController1">Return to List</a>
+    <a style="position:relative; left: 68%" href="/BugController1/UpdateBug/@Model.Id">Update @Model.Title</a>
+</div>
+
 <table class="table">
-    <tr>
-        <th>Product ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Category ID</th>
-        <th>On Sale</th>
-        <th>StockLevel</th>
+    <tr>  
+        <th>Creator</th>
+        <th>Bug Id</th>
+        <th>Title</th>
+        <th>Issue Summary</th>
+        <th>Ticket Assigned to</th>      
     </tr>
-    <tr style="display: table-cell">
+    <tr>
         <td>@Model.Creator</td>
         <td>@Model.Id</td>
         <td>@Model.Title</td>
@@ -18,3 +23,4 @@
         
     </tr>
 </table>
+

@@ -22,7 +22,7 @@ namespace BugTracker
         }
         public Bug GetBugById(string Id)
         {
-            return dbCon.QuerySingle<Bug>("SELECT * FROM bugs WHERE Id = @Id", new { id = Id });
+            return dbCon.QuerySingle<Bug>("SELECT * FROM bugs WHERE Id = @Id", new { Id = Id });
         }
 
        
@@ -37,11 +37,10 @@ namespace BugTracker
             return bug;
         }
 
-      
-
         public void UpdateBug(Bug bug)
         {
-            throw new NotImplementedException();
+           dbCon.Execute("UPDATE bugs SET Creator = @Creator, Summary = @Summary, Assigned = @Assigned WHERE Id = @Id",
+           new { Creator = bug.Creator, Summary = bug.Summary, Assigned = bug.Assigned, Id = bug.Id });
         }
 
         public IEnumerable<Employees> GetEmployees()
@@ -49,7 +48,7 @@ namespace BugTracker
             return dbCon.Query<Employees>("SELECT * FROM employees;");
         }  
         
-        //testing out the employee selction /option
+       
 
        
     }

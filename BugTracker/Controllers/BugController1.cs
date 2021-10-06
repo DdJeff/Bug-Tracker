@@ -19,9 +19,9 @@ namespace BugTracker.Controllers
         }
 
         //get bug by Id
-        public IActionResult ViewBug(string id)
+        public IActionResult ViewBug(string Id)
         {
-            var singleBug = bug.GetBugById(id);
+            var singleBug = bug.GetBugById(Id);
             return View(singleBug);
         }
         //creating the new bug
@@ -36,6 +36,20 @@ namespace BugTracker.Controllers
         {
             bug.InsertBug(bugToInsert);
             return RedirectToAction("Index");
+        }
+
+        //update bug
+        public IActionResult UpdateBug(string Id)
+        {
+            //get bug that you want to update by its Id
+            Bug bugCompnets = bug.GetBugById(Id);
+            return bugCompnets == null ? View(/*come back and make a view page for error*/"Product not found") : View(bugCompnets);
+        }
+        //add updated bug to the database
+        public IActionResult UpdateBugDb(Bug updatedBug)
+        {
+            bug.UpdateBug(updatedBug);
+            return RedirectToAction("ViewBug", new { Id = updatedBug.Id});
         }
       
     }
