@@ -51,6 +51,13 @@ namespace BugTracker.Controllers
             bug.UpdateBug(updatedBug);
             return RedirectToAction("ViewBug", new { Id = updatedBug.Id});
         }
+
+        //removing a completed bug from the database
+        public IActionResult DeleteBug(Bug deletedBug)
+        {
+           bug.DeleteBug(deletedBug);
+           return RedirectToAction("Index");
+        }
       
     }
 }

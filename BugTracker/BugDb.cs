@@ -43,6 +43,10 @@ namespace BugTracker
            new { Creator = bug.Creator, Summary = bug.Summary, Assigned = bug.Assigned, Id = bug.Id });
         }
 
+        public void DeleteBug(Bug bug)
+        {
+            dbCon.Execute("DELETE FROM bugs WHERE Id = @Id", new {Id = bug.Id});
+        }
         public IEnumerable<Employees> GetEmployees()
         {
             return dbCon.Query<Employees>("SELECT * FROM employees;");

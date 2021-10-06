@@ -15,6 +15,8 @@ namespace BugTracker
 
         public void InsertBug(Bug insertBug);
 
+        public void DeleteBug(Bug deletedBug);
+
         public Bug BugInstance();
 
 
