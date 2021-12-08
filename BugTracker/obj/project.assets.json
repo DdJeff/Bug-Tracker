@@ -943,11 +943,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FAMILY\\source\\repos\\BugTracker\\BugTracker\\BugTracker.csproj",
+      "projectUniqueName": "C:\\Users\\FAMILY\\Documents\\WEB-DEVELOPMENT\\TrueCoders\\BugTracker\\BugTracker\\BugTracker.csproj",
       "projectName": "BugTracker",
-      "projectPath": "C:\\Users\\FAMILY\\source\\repos\\BugTracker\\BugTracker\\BugTracker.csproj",
+      "projectPath": "C:\\Users\\FAMILY\\Documents\\WEB-DEVELOPMENT\\TrueCoders\\BugTracker\\BugTracker\\BugTracker.csproj",
       "packagesPath": "C:\\Users\\FAMILY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FAMILY\\source\\repos\\BugTracker\\BugTracker\\obj\\",
+      "outputPath": "C:\\Users\\FAMILY\\Documents\\WEB-DEVELOPMENT\\TrueCoders\\BugTracker\\BugTracker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

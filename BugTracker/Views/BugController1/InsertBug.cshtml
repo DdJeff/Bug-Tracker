@@ -10,10 +10,16 @@
             <select class="form-control" asp-for="Creator" value="" placeholder="Employee Name" id="basic-url" aria-describedby="basic-addon3id">
                 <option>Select Here</option>
                 <option>Deontay Jefferson</option>
-                <option>Michelle Jefferson</option>
-                <option>Josiah Jefferson</option>
-                <option>Noah Jefferson</option>
-                <option>Micah Jefferson</option>        
+                <option>James Smith</option>
+                <option>Michael Smith</option>
+                <option>Robert Smith</option>
+                <option>Maria Garcia</option>
+                <option>David Smith</option>
+                <option>Maria Rodriguez</option>
+                <option>Mary Smith</option>
+                <option>Maria Hernandez</option>
+                <option>Maria Martinez</option>
+                <option>James Johnson</option>
             </select>
         </div>
         <div class="input-group mb-3">
@@ -24,7 +30,7 @@
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon3">Issue Title:</span>
 
-                <input type="text" asp-for="Title" name="Title" value="" class="form-control Title" placeholder="Ex: Data Base not connecting" id="basic-url" aria-describedby="basic-addon3">
+                <input type="text" asp-for="Title" name="Title" value="" class="form-control Title" placeholder="Ex: Database not connecting" id="basic-url" aria-describedby="basic-addon3">
             </div>
             <div class="input-group">
                 <span class="input-group-text">Issue Summary: </span>
@@ -36,10 +42,16 @@
                 <select class="form-control" asp-for="Assigned" value="" name="Assigned" placeholder="Employee Name" id="basic-url" aria-describedby="basic-addon4">
                     <option>Select Here</option>
                     <option>Deontay Jefferson</option>
-                    <option>Michelle Jefferson</option>
-                    <option>Josiah Jefferson</option>
-                    <option>Noah Jefferson</option>
-                    <option>Micah Jefferson</option>
+                    <option>James Smith</option>
+                    <option>Michael Smith</option>
+                    <option>Robert Smith</option>
+                    <option>Maria Garcia</option>
+                    <option>David Smith</option>
+                    <option>Maria Rodriguez</option>
+                    <option>Mary Smith</option>
+                    <option>Maria Hernandez</option>
+                    <option>Maria Martinez</option>
+                    <option>James Johnson</option>
                 </select>
             </div>
             <br>
@@ -59,7 +71,7 @@
         let IdString = "";
         let char = "";
 
-    //Selceting a random index from mainArr to determind if the char will be A,a or 1...
+    //Selecting a random index from mainArr to determind if the char will be A,a or 1...
         for (let index = 0; index <= 15; index++) {
 
             let randomAlph = Math.floor(Math.random() * 26);
@@ -79,8 +91,8 @@
     }
 
     // generating a random string id then update the DOM
-    let idplacemnt = document.querySelectorAll("input");
-    idplacemnt[0].value = genId();
+    let idplacement = document.querySelectorAll("input");
+    idplacement[0].value = genId();
 
 </script>
 }

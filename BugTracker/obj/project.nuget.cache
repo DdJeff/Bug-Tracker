@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ydGgeVhmqzZ92VkFtkFSPMejEhYMBlHOBDzyDaohhPaYduxVsnXdrn263ID7wbMNNzb3d8ZWb+fi8M0+ok5P5Q==",
+  "dgSpecHash": "/4YH6hDPss2pahBRL29yxWqnUsQAQj144j6LTL154Qkb2e1iTwecFVhox26nPeOdgSt4nIqVH59+6mE7K3kBiA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FAMILY\\source\\repos\\BugTracker\\BugTracker\\BugTracker.csproj",
+  "projectFilePath": "C:\\Users\\FAMILY\\Documents\\WEB-DEVELOPMENT\\TrueCoders\\BugTracker\\BugTracker\\BugTracker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FAMILY\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\FAMILY\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",

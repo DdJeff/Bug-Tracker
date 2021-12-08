@@ -5,7 +5,7 @@ using BugTracker.Models;
 
 namespace BugTracker
 {
-   public interface IBug // it looks like you use an interface to remove abugutiy beween the controller and the model
+   public interface IBug 
     {
         public IEnumerable<Bug> GetBugs();
 
@@ -21,7 +21,7 @@ namespace BugTracker
 
 
 
-        // come back and add a drop down.
+       
 
     }
 }
