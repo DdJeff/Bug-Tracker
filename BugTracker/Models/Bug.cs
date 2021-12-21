@@ -12,11 +12,7 @@ namespace BugTracker.Models
         public string Summary { get; set; }
         public string Assigned { get; set; }
 
-        internal object GetBugs()
-        {
-            throw new NotImplementedException();
-        }
-
+   
        
     }
 }

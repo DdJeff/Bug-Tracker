@@ -1,15 +1,17 @@
-﻿using BugTracker.Models;
-using System;
+﻿
 using System.Collections.Generic;
 using Dapper;
 using System.Data;
 
-namespace BugTracker
+
+namespace BugTracker.Models
 {
+
+   
     public class BugDb : IBug
     { 
         private readonly IDbConnection dbCon;
-
+        
         public BugDb (IDbConnection db)
         {
             dbCon = db;
@@ -22,10 +24,10 @@ namespace BugTracker
         }
         public Bug GetBugById(string Id)
         {
-            return dbCon.QuerySingle<Bug>("SELECT * FROM bugs WHERE Id = @Id", new { Id = Id });
+           return dbCon.QuerySingle<Bug>("SELECT * FROM bugs WHERE Id = @Id", new { Id = Id });
+          
         }
 
-       
         public void InsertBug(Bug insertBug)
         { 
             dbCon.Execute("INSERT INTO bugs (Creator, Id, Title, Summary, Assigned) VALUES (@Creator, @Id, @Title, @Summary, @Assigned); ", new { Creator = insertBug.Creator, Id = insertBug.Id, Title = insertBug.Title, Summary = insertBug.Summary, Assigned = insertBug.Assigned });

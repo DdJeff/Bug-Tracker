@@ -19,9 +19,5 @@ namespace BugTracker
 
         public Bug BugInstance();
 
-
-
-       
-
     }
 }

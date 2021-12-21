@@ -8,6 +8,8 @@ namespace BugTracker.Controllers
     public class BugController1 : Controller
     {
         private readonly IBug bug;
+
+       
         public BugController1(IBug bugs)
         {
             bug = bugs;
@@ -19,19 +21,19 @@ namespace BugTracker.Controllers
         }
 
         //get bug by Id
-        public IActionResult ViewBug(string Id)
+        public IActionResult ViewBug(string Id) // => localHost:bugController1/viewBug/?=id
         {
             var singleBug = bug.GetBugById(Id);
             return View(singleBug);
         }
-        //creating the new bug
+        //creating the new bug => for the insert bug view
         public IActionResult InsertBug()
         {
             var newBug = bug.BugInstance();
 
             return View(newBug);
         }
-        //Inserting the new bug into database
+        //Inserting the new bug into database <= from the insert bug view
         public IActionResult InsertBugDb(Bug bugToInsert)
         {
             bug.InsertBug(bugToInsert);
@@ -42,14 +44,14 @@ namespace BugTracker.Controllers
         public IActionResult UpdateBug(string Id)
         {
             //get bug that you want to update by its Id
-            Bug bugCompnets = bug.GetBugById(Id);
-            return bugCompnets == null ? View(/*come back and make a view page for error*/"Product not found") : View(bugCompnets);
+            Bug bugComponets = bug.GetBugById(Id);
+            return bugComponets == null ? View(/*come back and make a view page for error*/"Product not found") : View(bugComponets);
         }
         //add updated bug to the database
         public IActionResult UpdateBugDb(Bug updatedBug)
         {
             bug.UpdateBug(updatedBug);
-            return RedirectToAction("ViewBug", new { Id = updatedBug.Id});
+            return RedirectToAction("ViewBug", new {Id = updatedBug.Id});
         }
 
         //removing a completed bug from the database

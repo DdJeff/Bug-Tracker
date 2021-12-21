@@ -17,8 +17,6 @@
     @foreach (var bugTicket in Model)
     {
 <tr>
-    <!--This is how you route the main list to individulks pages by ids-->
-    <!--  <td><a href=/Home/ViewProduct/product.ProductID>product.ProductID</a></td> /../Views/BugController1/ViewBug.cshtml -->
     <td>@bugTicket.Creator</td>
     <td><a href="~/BugController1/ViewBug/@bugTicket.Id">@bugTicket.Id</a></td>
     <td>@bugTicket.Title</td>
