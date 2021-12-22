@@ -28,7 +28,7 @@ namespace BugTracker
         {
             services.AddControllersWithViews();
        
-            services.AddScoped<IDbConnection>((s) =>
+            services.AddScoped<IDbConnection>(s =>
                 {
                     IDbConnection conn = new MySqlConnection(Configuration.GetConnectionString("bug_tracker"));
                     conn.Open();
@@ -37,6 +37,7 @@ namespace BugTracker
 
             services.AddTransient<IPayRoll, PayRoll>();
             services.AddTransient<IBug, BugDb>();
+            
 
         } 
 // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
